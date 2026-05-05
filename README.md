@@ -151,4 +151,4 @@ $\Rightarrow$ ```int x = 10, $ref = x;```, _ref_ refers to the memory location o
 
 ### Pointers
 $\Rightarrow$ A pointer variable is stored in stack memory, but points to a memory address usually in heap memory.  
-$\Rightarrow$ ```int *p = new int(10);```, _p_ is stored in stack memory and points to _*p_, a memory address in heap memory.
+$\Rightarrow$ ```int *p = new int(10);```, _p_ is stored in stack memory and points to _*p_, a memory address in heap memory. Changing the value of _*p_ changed the value stored at the memory address in heap memory.
