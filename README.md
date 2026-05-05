@@ -49,6 +49,10 @@ Logo statements are generally structured as:
 | SETPENCOLOR | | ```SETPENCOLOR 0``` | Changes the pen colour. |
 | SETBACKGROUND | SETBG | ```SETBG 7``` | Changes the background colour. | 
 | CLEARSCREEN | CS | ```CS``` | Clears all pen markings from the screen, and moves the turtle to the origin. |
+| SETPOS | | ```SETPOS [0 0]``` | Moves the turtle to the given coordinates. |
+| SETX | | ```SETX 0``` | Moves the turtle to the given x coordinate. |
+| SETY | | ```SETY 0``` | Moves the turtle to the given y coordinate. |
+| SETHEADING | SETH | ```SETH 0``` | Changes the direction the turtle if facing. (0 - North, 180 - South) | 
 
 ### Turtle Pen Colours
 | Value | Colour | Number | Colour | Name | Colour |
@@ -72,6 +76,25 @@ Logo statements are generally structured as:
 | ```x * y``` |```PRODUCT :x :y```|
 | ```x / y``` |```QUOTIENT :x :y```|
 | ```x % y``` |```MODULO :x :y```|
+| ```x == y``` | ```:x = :y``` |
+| ```x != y``` | ```:x <> :y```|
+| ```x > y``` | ```:x > :y```|
+| ```x >= y``` | ```:x >= :y```|
+| ```x < y``` | ```:x < :y```|
+| ```x <= y``` | ```:x <= :y```|
+| ```x && y``` | ```AND :x :y```|
+| ```x && y && z``` | ```AND :x :y :z```|
+| ```x \|\| y``` | ```OR :x :y``` |
+| ```x \|\| y \|\| z``` | ```OR :x :y :z``` |
+| ```!x``` | ```NOT :x``` |
 | ```std::cout << x + y << std::endl;``` | ```PRINT (SUM :x :y)``` |
 | ```std::cout << arr[1] << std::endl;``` | ```PRINT (ITEM 2 :arr)``` |
-| ```int myFunc(int x, int y) {``` <br> ```}``` | ```TO myFunc :x :y``` <br> ```END```|
+| ```std::cout << "Hello World! << std::endl;``` | ```PRINT (SENTENCE "Hello "World "!)``` |
+| ```std::getline(std::cin, input);``` | ```MAKE "input READWORD``` |
+| ```if (x == y ) {``` <br> ```}``` | ```IF (:x = :y) [``` <br> ```]``` |
+| ```if (x != y ) {``` <br> ```} else {``` <br> ```}``` | ```IFELSE (:x <> :y) [``` <br> ```] [``` <br> ```]``` |
+| ```for (int i = 0; i < 10; i++) {``` <br> _```    // body of the loop```_ <br> ```}``` | ```REPEAT 10 [``` <br> _```    ; body of the loop```_ <br> ```]``` |
+| ```while (x > 5) {``` <br> _```    // body of the loop```_ <br> ```}``` | ```WHILE [: > 5] [``` <br> _```    ; body of the loop```_ <br> ```]``` |
+| ```do {``` <br> _```    // body of the loop```_ <br> ```} while (y < 10);``` | ```DO.WHILE [``` <br> _```    ; body of the loop```_ <br> ```] [:y < 10]``` |
+| ```void myFunc() {``` <br> ```}``` | ```TO myFunc``` <br> ```END```|
+| ```int myFunc(int x, int y) {``` <br> ```    return x + y;``` <br> ```}``` | ```TO myFunc :x :y``` <br> ```    OUTPUT (SUM :x :y)``` <br> ```END```|
