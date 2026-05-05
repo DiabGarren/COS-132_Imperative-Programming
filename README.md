@@ -96,7 +96,7 @@ Logo statements are generally structured as:
 | ```x / y``` |```QUOTIENT :x :y```|
 | ```x % y``` |```MODULO :x :y```|
 
-### Operands
+### Logcal Operands
 | C++ | Logo |
 | -- | -- |
 | ```x == y``` | ```:x = :y``` |
@@ -111,21 +111,28 @@ Logo statements are generally structured as:
 | ```x \|\| y \|\| z``` | ```OR :x :y :z``` |
 | ```!x``` | ```NOT :x``` |
 
-### If Statements
+### Condition Statements
 | C++ | Logo |
 | -- | -- |
 | ```if (x == y ) {``` <br> ```}``` | ```IF (:x = :y) [``` <br> ```]``` |
 | ```if (x != y ) {``` <br> ```} else {``` <br> ```}``` | ```IFELSE (:x <> :y) [``` <br> ```] [``` <br> ```]``` |
+| ```(x > y) ? return x : return y;``` | |
+| ```switch (input) {``` <br> ```  case 1:``` <br> _```    // code to be executed if input == 1```_ <br> ```    break;``` <br> ```  default:``` <br> _```    // code to be executed if input doesn't match any cases```_ <br> ```}```| |
 
 ### Loops
 | C++ | Logo |
 | -- | -- |
-| ```for (int i = 0; i < 10; i++) {``` <br> _```    // body of the loop```_ <br> ```}``` | ```REPEAT 10 [``` <br> _```    ; body of the loop```_ <br> ```]``` |
-| ```while (x > 5) {``` <br> _```    // body of the loop```_ <br> ```}``` | ```WHILE [: > 5] [``` <br> _```    ; body of the loop```_ <br> ```]``` |
-| ```do {``` <br> _```    // body of the loop```_ <br> ```} while (y < 10);``` | ```DO.WHILE [``` <br> _```    ; body of the loop```_ <br> ```] [:y < 10]``` |
+| ```for (int i = 0; i < 10; i++) {``` <br> _```  // body of the loop```_ <br> ```}``` | ```REPEAT 10 [``` <br> _```  ; body of the loop```_ <br> ```]``` |
+| ```while (x > 5) {``` <br> _```  // body of the loop```_ <br> ```}``` | ```WHILE [: > 5] [``` <br> _```  ; body of the loop```_ <br> ```]``` |
+| ```do {``` <br> _```  // body of the loop```_ <br> ```} while (y < 10);``` | ```DO.WHILE [``` <br> _```  ; body of the loop```_ <br> ```] [:y < 10]``` |
 
 ### Functions
 | C++ | Logo |
 | -- | -- |
 | ```void myFunc() {``` <br> ```}``` | ```TO myFunc``` <br> ```END```|
-| ```int myFunc(int x, int y) {``` <br> ```    return x + y;``` <br> ```}``` | ```TO myFunc :x :y``` <br> ```    OUTPUT (SUM :x :y)``` <br> ```END```|
+| ```int myFunc(int x, int y) {``` <br> ```  return x + y;``` <br> ```}``` | ```TO myFunc :x :y``` <br> ```  OUTPUT (SUM :x :y)``` <br> ```END```|
+
+### Recursive Functions
+| C++ | Logo |
+| -- | -- |
+| ```int fibonacci(int n) {``` <br> ```  if (n <= 1) {;``` <br> ```    return n;``` <br> ```  }``` <br> ```  return fibonacci(n - 1) + fibonacci(n - 2);``` <br> ```}```| |
