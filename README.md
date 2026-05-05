@@ -136,3 +136,19 @@ Logo statements are generally structured as:
 | C++ | Logo |
 | -- | -- |
 | ```int fibonacci(int n) {``` <br> ```  if (n <= 1) {``` <br> ```    return n;``` <br> ```  }``` <br> ```  return fibonacci(n - 1) + fibonacci(n - 2);``` <br> ```}```| ```TO fibonacci :n``` <br> ```  IF (n <= 1) [``` <br> ```    OUTPUT :n``` <br> ```  ]``` <br> ```  OUTPUT (SUM fibonacci(:n - 1) fibonacci(:n - 2))``` <br> ```END``` |
+
+## C++
+### Memory
+| Stack | Heap |
+| -- | -- |
+| Automatically allocated and deallocated. | Allocated using the ```new``` construct and deallocated using the ```delet``` construct. |
+| Fixed size. | Dynamic size. |
+| Stores local variables and the state of a function when called. | Any data created using the ```new``` operator. |
+
+### Refernces
+$\Rightarrow$ A reference variable refers to the memory location of a different variable.  
+$\Rightarrow$ ```int x = 10, $ref = x;```, _ref_ refers to the memory location of _x_ (both stored in stack memory), this means that changing the value using _ref_ or _x_, changes the value stored at that memory address.
+
+### Pointers
+$\Rightarrow$ A pointer variable is stored in stack memory, but points to a memory address usually in heap memory.  
+$\Rightarrow$ ```int *p = new int(10);```, _p_ is stored in stack memory and points to _*p_, a memory address in heap memory.
