@@ -135,4 +135,4 @@ Logo statements are generally structured as:
 ### Recursive Functions
 | C++ | Logo |
 | -- | -- |
-| ```int fibonacci(int n) {``` <br> ```  if (n <= 1) {;``` <br> ```    return n;``` <br> ```  }``` <br> ```  return fibonacci(n - 1) + fibonacci(n - 2);``` <br> ```}```| |
+| ```int fibonacci(int n) {``` <br> ```  if (n <= 1) {``` <br> ```    return n;``` <br> ```  }``` <br> ```  return fibonacci(n - 1) + fibonacci(n - 2);``` <br> ```}```| ```TO fibonacci :n``` <br> ```  IF (n <= 1) [``` <br> ```    OUTPUT :n``` <br> ```  ]``` <br> ```  OUTPUT (SUM fibonacci(:n - 1) fibonacci(:n - 2))``` <br> ```END``` |
