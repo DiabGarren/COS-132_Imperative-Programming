@@ -65,17 +65,40 @@ Logo statements are generally structured as:
 | 5 | $\color{magenta}{\text{Magenta}}$ | 11 | $\color{aqua}{\text{Aqua}}$ | | |
 
 ## C++ vs. Logo
+### Variables
 | C++ | Logo |
 | -- | -- |
 | ```int x = 5;``` | ```MAKE "x 5``` |
+| ```char myChar = 'a';``` | ```MAKE "mychar "a``` |
 | ```bool val = true;``` | ```MAKE "val "true``` |
 | ```std::string str = "Hello World";``` | ```MAKE "str (SENTENCE "Hello "World)``` |
 | ```int arr[5] = {};``` | ```MAKE "arr []``` |
+
+### Output
+| C++ | Logo |
+| -- | -- |
+| ```std::cout << x + y << std::endl;``` | ```PRINT (SUM :x :y)``` |
+| ```std::cout << arr[1] << std::endl;``` | ```PRINT (ITEM 2 :arr)``` |
+| ```std::cout << "Hello World! << std::endl;``` | ```PRINT (SENTENCE "Hello "World "!)``` |
+
+### Input
+| C++ | Logo |
+| -- | -- |
+| ```std::cin >> input;``` | ```MAKE "input READCHAR``` |
+| ```std::getline(std::cin, input);``` | ```MAKE "input READWORD``` |
+
+### Arithmetic Operations
+| C++ | Logo |
+| -- | -- |
 | ```x + y``` |```SUM :x :y```|
 | ```x - y``` |```DIFFERENCE :x :y```|
 | ```x * y``` |```PRODUCT :x :y```|
 | ```x / y``` |```QUOTIENT :x :y```|
 | ```x % y``` |```MODULO :x :y```|
+
+### Operands
+| C++ | Logo |
+| -- | -- |
 | ```x == y``` | ```:x = :y``` |
 | ```x != y``` | ```:x <> :y```|
 | ```x > y``` | ```:x > :y```|
@@ -87,14 +110,22 @@ Logo statements are generally structured as:
 | ```x \|\| y``` | ```OR :x :y``` |
 | ```x \|\| y \|\| z``` | ```OR :x :y :z``` |
 | ```!x``` | ```NOT :x``` |
-| ```std::cout << x + y << std::endl;``` | ```PRINT (SUM :x :y)``` |
-| ```std::cout << arr[1] << std::endl;``` | ```PRINT (ITEM 2 :arr)``` |
-| ```std::cout << "Hello World! << std::endl;``` | ```PRINT (SENTENCE "Hello "World "!)``` |
-| ```std::getline(std::cin, input);``` | ```MAKE "input READWORD``` |
+
+### If Statements
+| C++ | Logo |
+| -- | -- |
 | ```if (x == y ) {``` <br> ```}``` | ```IF (:x = :y) [``` <br> ```]``` |
 | ```if (x != y ) {``` <br> ```} else {``` <br> ```}``` | ```IFELSE (:x <> :y) [``` <br> ```] [``` <br> ```]``` |
+
+### Loops
+| C++ | Logo |
+| -- | -- |
 | ```for (int i = 0; i < 10; i++) {``` <br> _```    // body of the loop```_ <br> ```}``` | ```REPEAT 10 [``` <br> _```    ; body of the loop```_ <br> ```]``` |
 | ```while (x > 5) {``` <br> _```    // body of the loop```_ <br> ```}``` | ```WHILE [: > 5] [``` <br> _```    ; body of the loop```_ <br> ```]``` |
 | ```do {``` <br> _```    // body of the loop```_ <br> ```} while (y < 10);``` | ```DO.WHILE [``` <br> _```    ; body of the loop```_ <br> ```] [:y < 10]``` |
+
+### Functions
+| C++ | Logo |
+| -- | -- |
 | ```void myFunc() {``` <br> ```}``` | ```TO myFunc``` <br> ```END```|
 | ```int myFunc(int x, int y) {``` <br> ```    return x + y;``` <br> ```}``` | ```TO myFunc :x :y``` <br> ```    OUTPUT (SUM :x :y)``` <br> ```END```|
