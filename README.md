@@ -44,9 +44,11 @@ Logo statements are generally structured as:
 | BACK | BK | ```BK 50``` | Moves the turtle back. (50 steps) |
 | LEFT | LT | ```LT 90``` | Turns the turtle left. (90 deg) |
 | RIGHT | RT | ```RT 45``` | Turns the turtle right. (45 deg) |
-| PENUP | PU | ```PU``` | Lifts the pen. (Moving won't draw a line) |
-| PENDOWN | PD | ```PD``` | Puts the pen down. (Moving will draw a line) |
+| PENUP | PU | ```PU``` | Stops the pen from drawing. |
+| PENDOWN | PD | ```PD``` | Enables the pen to draw. |
 | SETPENCOLOR | | ```SETPENCOLOR 0``` | Changes the pen colour. |
+| SETBACKGROUND | SETBG | ```SETBG 7``` | Changes the background colour. | 
+| CLEARSCREEN | CS | ```CS``` | Clears all pen markings from the screen, and moves the turtle to the origin. |
 
 ### Turtle Pen Colours
 | Value | Colour | Number | Colour | Name | Colour |
@@ -57,3 +59,19 @@ Logo statements are generally structured as:
 | 3 | $\color{cyan}{\text{Cyan}}$ | 9 | $\color{tan}{\text{Tan}}$ | 15 | $\color{grey}{\text{Grey}}$ |
 | 4 | $\color{red}{\text{Red}}$ | 10 | $\color{#357446}{\text{Forest}}$ | | |
 | 5 | $\color{magenta}{\text{Magenta}}$ | 11 | $\color{aqua}{\text{Aqua}}$ | | |
+
+## C++ vs. Logo
+| C++ | Logo |
+| -- | -- |
+| ```int x = 5;``` | ```MAKE "x 5``` |
+| ```bool val = true;``` | ```MAKE "val "true``` |
+| ```std::string str = "Hello World";``` | ```MAKE "str (SENTENCE "Hello "World)``` |
+| ```int arr[5] = {};``` | ```MAKE "arr []``` |
+| ```x + y``` |```SUM :x :y```|
+| ```x - y``` |```DIFFERENCE :x :y```|
+| ```x * y``` |```PRODUCT :x :y```|
+| ```x / y``` |```QUOTIENT :x :y```|
+| ```x % y``` |```MODULO :x :y```|
+| ```std::cout << x + y << std::endl;``` | ```PRINT (SUM :x :y)``` |
+| ```std::cout << arr[1] << std::endl;``` | ```PRINT (ITEM 2 :arr)``` |
+| ```int myFunc(int x, int y) {``` <br> ```}``` | ```TO myFunc :x :y``` <br> ```END```|
